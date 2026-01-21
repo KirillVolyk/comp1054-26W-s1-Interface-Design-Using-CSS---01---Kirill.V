@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* Made by: Kirill.V */
+/* Resources: Used google to find a way to format into columns, and got reccomended to use hyphons and word-break to give it at newspaper feel (justify wasn't cutting it */
+
+/* Header webfont */
+.alfa-slab-one-regular {
+  font-family: "Alfa Slab One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.antonio-normal {
+  font-family: "Antonio", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* set basic font size and margins for entire page */
+html {
+    margin-top: 100px;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-bottom: 100px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+/* the editor box */
+h1 {
+    font-family: 'Antonio', serif;
+    font-weight: lighter;
+    letter-spacing: 10px;
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    /* make a think black box around this section */
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    padding-left: 5px;
+}
+/* the title */
+h2 {
+    font-family: 'Antonio', serif;
+    font-size: 60px;
+    letter-spacing: 10px;
+    word-spacing: 30px;
+    text-align: center;
+}
+/* bold spaced out sentence at the top */
+header p {
+    font-family: 'Antonio', serif;
+    font-weight: bold;
+    font-size: 30px;
+    word-spacing: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 35px;
+}
+/* the small title before different paragraphs */
+h4 {
+    font-family: 'Antonio', serif;
+    font-weight: bolder;
+    font-size: 20px;
+    word-spacing: 5px;
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+/* target all paragraphs */
+p {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: justify;
+    word-break: break-all;
+    hyphens: auto;
+    line-height: 1;
+    text-indent: 20px;
+    margin-top: -20px;
+}
+/* target only first paragraph as it does NOT have indent */
+p:first-of-type{
+    text-indent: 0px;
+}
+/* paragraph child of main of first type, to have no margin at the top*/
+main p:first-of-type {
+    margin-top: 0px;
+}
+/* whole main section which has all paragraphs and header4, to be formated in 3 collumns */
+main {
+    column-count: 3;
+    column-gap: 35px;
+}
