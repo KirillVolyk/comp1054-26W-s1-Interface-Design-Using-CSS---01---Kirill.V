@@ -16,10 +16,10 @@
 /* "Universal" rule for all elements in html*/
 html {
     background-color: #000000;
-    color: #ffffff;
+    color: hsl(0 0% 100%);
     text-align: center;
     border-style: double;
-    border-color: #ffffff;
+    border-color: hsl(0 0% 100%);
     border-width: 10px;
 
 }
@@ -67,28 +67,46 @@ section {
     font-family: "Russo One";
     text-shadow: 0px 2px 4px #c4c4c4;
     border-style: dashed;
-    border-color: #ffffff;
+    border-color: hsl(0 0% 100%);
 }
 
 /* Every second section for lyrics */
 section:nth-child(2n) {
+    background-image: "../";
     border-width: 3px;
-    background-color: darkgray;
+    background-color: dimgrey;
     color: #000000;
-    text-shadow: 4px 6px 8px #ffffff;
+    text-shadow: 4px 6px 8px hsl(0 0% 100%);
 }
 
 /* Song description + my thoughts section */
 aside {
     display: inline-block;
     width: 45%;
-    border: 2px solid #ffffff;
+    border: 2px solid hsl(0 0% 100%);
     margin: 10px;
     font-family: "Russo One";
     padding: 10px;
     vertical-align: top;
     text-align: justify;
     line-height: 2.5;
-    background-color: darkgray;
+    background-color: dimgrey;
     color: #000000
+}
+
+/* Footer styling */
+footer { 
+    margin-top: 2rem; 
+    padding: 2rem 0; 
+    text-align: center; 
+    font-size: 0.9rem; 
+    color: dimgrey;
+} 
+footer a { 
+    color: #c4c4c4;
+    text-decoration: none; 
+} 
+footer a:hover { 
+    text-decoration: underline;
+    color: hsl(0 0% 100%);
 }
