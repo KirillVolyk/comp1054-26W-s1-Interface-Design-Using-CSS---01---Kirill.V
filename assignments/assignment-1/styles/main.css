@@ -13,17 +13,20 @@
     font-style: normal;
 }
 
+/* "Universal" rule for all elements in html*/
 html {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
-    
+    border-style: double;
+    border-color: #ffffff;
+    border-width: 10px;
+
 }
 
-body{
+body {}
 
-}
-
+/* Title rules */
 h1 {
     margin-top: 5rem;
     text-shadow: 2px 4px 6px #c4c4c4;
@@ -31,6 +34,7 @@ h1 {
     font-family: "Special Elite";
 }
 
+/* In image content */
 h2 {
     font-size: 1rem;
     font-family: "Russo One";
@@ -38,33 +42,53 @@ h2 {
     line-height: 4;
 }
 
+/* Space for the image */
 header {
-    height: 30rem;
-    background-image: url("../images/pachkaSigaret.png"); 
-    background-size: cover; 
-    background-position: center; 
+    height: 35rem;
+    background-image: url("../images/pachkaSigaret.png");
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    display: flex; 
-    justify-content: center; 
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-section { 
-    margin-top: 5rem; 
+/* Line break */
+hr {
+    border: none;
+    border-top: 3px solid #c4c4c4;
+    margin: 3rem 0;
+}
+
+/* Lyrics sections */
+section {
+    margin-top: 5rem;
     font-family: "Russo One";
     text-shadow: 0px 2px 4px #c4c4c4;
     border-style: dashed;
     border-color: #ffffff;
 }
 
+/* Every second section for lyrics */
+section:nth-child(2n) {
+    border-width: 3px;
+    background-color: darkgray;
+    color: #000000;
+    text-shadow: 4px 6px 8px #ffffff;
+}
+
+/* Song description + my thoughts section */
 aside {
-    display: inline-block; 
-    width: 45%; 
+    display: inline-block;
+    width: 45%;
     border: 2px solid #ffffff;
     margin: 10px;
     font-family: "Russo One";
     padding: 10px;
-    vertical-align: top; 
-    text-align: justify; 
-    line-height: 1.5;
+    vertical-align: top;
+    text-align: justify;
+    line-height: 2.5;
+    background-color: darkgray;
+    color: #000000
 }
