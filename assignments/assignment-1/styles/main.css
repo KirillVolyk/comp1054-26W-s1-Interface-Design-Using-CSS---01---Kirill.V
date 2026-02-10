@@ -25,12 +25,13 @@ html {
 
 }
 
+/* Set an image to "everything"/body background */
 body {
     background-image: url("../images/blackBrickWall.jpg");
 }
 
 /* Title rules */
-body > h1 {
+body>h1 {
     margin-top: 5rem;
     text-shadow: 2px 4px 6px #c4c4c4;
     font-size: 5rem;
@@ -89,7 +90,7 @@ section:nth-child(2n) {
 }
 
 /* Add a bit of space for the caption after lyrics */
-section + figcaption {
+section+figcaption {
     margin-top: 2rem;
 }
 
@@ -136,4 +137,50 @@ footer a:hover {
 ul {
     list-style-type: none;
     padding: 0;
+}
+
+/* For fun, everytime the name of the song is mentioned in the song do something */
+b {
+    font-family: "Special Elite", system-ui;
+    font-weight: 300;
+    font-style: italic;
+    color: rgb(29, 54, 144);
+}
+
+b:hover {
+    color: hsl(0 0% 100%);
+    text-shadow: 2px 4px 6px #c4c4c4;
+}
+
+h2>b:hover {
+    color: #000000;
+    text-shadow: 0 0 0 #000000;
+    color: #000000;
+}
+
+h2>b {
+    color: #000000
+}
+
+/* For fun, everytime the name of the group is mentioned in the website do something */
+i {
+    font-family: "Special Elite", system-ui;
+    font-weight: 500;
+    font-style: oblique;
+    color: rgb(144, 131, 29);
+}
+
+i:hover {
+    color: hsl(0 0% 100%);
+    text-shadow: 2px 4px 6px #c4c4c4;
+}
+
+h2>i:hover {
+    color: #000000;
+    text-shadow: 0 0 0 #000000;
+    color: #000000;
+}
+
+h2>i {
+    color: #000000
 }
