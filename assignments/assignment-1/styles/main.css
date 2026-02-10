@@ -2,18 +2,53 @@
 /* Headings */
 .russo-one-regular {
     font-family: "Russo One", sans-serif;
-    font-weight: 400;
+    font-weight: 100;
     font-style: normal;
 }
 
 /* Paragraphs */
 .special-elite-regular {
     font-family: "Special Elite", system-ui;
-    font-weight: 400;
+    font-weight: 100;
     font-style: normal;
 }
 
 html {
     background-color: #000000;
     color: #ffffff;
+    text-align: center;
+    
+}
+
+body{
+    background-image: url("../images/pachkaSigaret.png");   
+    background-size:contain; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    color: #000000;
+}
+
+h1 {
+    margin-top: 5rem;
+    margin-bottom: 30rem;
+    font-size: 5rem;
+    font-family: "Special Elite";
+}
+
+section { 
+    margin-top: 5rem; 
+    font-family: "Russo One";
+}
+
+aside {
+    display: inline-block; 
+    width: 45%; 
+    border: 2px solid #ffffff;
+    margin: 10px;
+    font-family: "Russo One";
+    padding: 10px;
+    vertical-align: top; 
+    text-align: justify; 
+    line-height: 1.5;
 }
