@@ -1,5 +1,6 @@
 /* Main css for the website */
 /* Headings */
+/* Note: Some selectors could be replaced by simpler ones, just felt like using them to not get rusty */
 .russo-one-regular {
     font-family: "Russo One", sans-serif;
     font-weight: 100;
@@ -24,10 +25,12 @@ html {
 
 }
 
-body {}
+body {
+    background-image: url("../images/blackBrickWall.jpg");
+}
 
 /* Title rules */
-h1 {
+body > h1 {
     margin-top: 5rem;
     text-shadow: 2px 4px 6px #c4c4c4;
     font-size: 5rem;
@@ -37,46 +40,57 @@ h1 {
 /* In image content */
 h2 {
     font-size: 1rem;
-    font-family: "Russo One";
+    font-family: "Special Elite";
     color: #000000;
     line-height: 4;
+    text-shadow: 4px 6px 6px #000000;
 }
 
 /* Space for the image */
 header {
+    display: flex;
     height: 35rem;
     background-image: url("../images/pachkaSigaret.png");
+    /* stretch the image to cover, and center it, no repeat */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
+    /* center text in header with flex */
     justify-content: center;
     align-items: center;
 }
 
 /* Line break */
+/* Forgot to cite this, it was a google search on how to add breaks without doing border method, and this came out */
 hr {
-    border: none;
     border-top: 3px solid #c4c4c4;
     margin: 3rem 0;
 }
 
 /* Lyrics sections */
-section {
+figure section {
     margin-top: 5rem;
     font-family: "Russo One";
     text-shadow: 0px 2px 4px #c4c4c4;
+    color: #c4c4c4;
     border-style: dashed;
     border-color: hsl(0 0% 100%);
+    background-image: url("../images/blackSky3.webp");
+    background-size: cover;
 }
 
 /* Every second section for lyrics */
 section:nth-child(2n) {
-    background-image: "../";
+    background-image: url("../images/blackBrickWall.jpg");
     border-width: 3px;
     background-color: dimgrey;
-    color: #000000;
-    text-shadow: 4px 6px 8px hsl(0 0% 100%);
+    color: hsl(0 0% 100%);
+    text-shadow: 4px 6px 8px #000000;
+}
+
+/* Add a bit of space for the caption after lyrics */
+section + figcaption {
+    margin-top: 2rem;
 }
 
 /* Song description + my thoughts section */
@@ -91,22 +105,35 @@ aside {
     text-align: justify;
     line-height: 2.5;
     background-color: dimgrey;
-    color: #000000
+    background-image: url("../images/blackSky.jpg");
+    background-size: cover;
+    color: #c4c4c4;
+    text-shadow: 4px 6px 8px #000000;
 }
 
 /* Footer styling */
-footer { 
-    margin-top: 2rem; 
-    padding: 2rem 0; 
-    text-align: center; 
-    font-size: 0.9rem; 
+footer {
+    margin-top: 2rem;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
     color: dimgrey;
-} 
-footer a { 
+}
+
+/* Footer links */
+footer a {
     color: #c4c4c4;
-    text-decoration: none; 
-} 
-footer a:hover { 
+    text-decoration: none;
+}
+
+/* Footer links on on hover */
+footer a:hover {
     text-decoration: underline;
     color: hsl(0 0% 100%);
+}
+
+/* Make the list very basic */
+ul {
+    list-style-type: none;
+    padding: 0;
 }
