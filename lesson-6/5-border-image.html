@@ -11,13 +11,17 @@
 
 		/* STEP 1: Examine the image we will use - 'img/doily.png' */
 		.bordered-box {
-			
+			border: 35px solid pink;
+			height: 40vh;
+			width: 40vw;
 			/* STEP 2: Set the border-image-source */
-			
+			border-image-source: url("img/doily.png");
 			/* STEP 3: Set the border-image slice, width, and outset */
-			
+			border-image-slice: 30;
 			/* STEP 4: Set the border-image-repeat (stretch | repeat | round | space) */
-			
+			border-image-width: auto;
+			border-image-outset: 20px;
+			border-image-repeat: round;
 		}
 
 		body {
