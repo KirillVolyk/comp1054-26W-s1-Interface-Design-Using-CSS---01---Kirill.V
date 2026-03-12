@@ -1,5 +1,22 @@
+html {
+
+}
 #container {
+    margin: 1rem;
+    border: 2px solid black;
+    padding: 2rem;
+}
+main {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
+}
+main > aside {
+    grid-column: 1;
+}
+main > article {
+    grid-column: 2;
+}
+article > article {
+    grid-column: 2;
 }
