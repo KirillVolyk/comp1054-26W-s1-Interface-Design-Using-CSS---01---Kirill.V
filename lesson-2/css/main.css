@@ -20,6 +20,7 @@ html {
 	background-image: url("../images/how-much.jpg");
 	background-attachment: fixed;
 	/* STEP 10c: set the background image size to cover the viewport */
+	background-size: cover;
 	
 	
 	

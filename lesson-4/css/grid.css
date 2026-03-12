@@ -17,15 +17,18 @@ body {
 	width: 80%;
 	margin: 0 auto;
 	/* STEP 1: Set the container to display: grid; */
-	
+	display: grid;
 	/* STEP 7: Plot out the grid-template-areas */
-	
+	grid-template-areas: 
+		"header header header"
+		"nav section aside"
+		"footer footer footer";
 	/* STEP 8: Control the width of the grid rows */
-	
+	grid-template-rows: 100px 1fr 100px;
 	/* STEP 9: Control the width of the grid columns (try the fr unit) */
-	
+	grid-template-columns: 1fr 2fr 1fr;
 	/* STEP 10b: Set the grid-gap */
-	
+	grid-gap: 10px;
 }
 
 header {
