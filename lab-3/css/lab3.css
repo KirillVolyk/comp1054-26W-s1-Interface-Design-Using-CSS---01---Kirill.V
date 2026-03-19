@@ -16,3 +16,66 @@ html {
 	width: 80%;
 	margin: 0 auto;
 }
+/* style list items to be horizontal and without a dot */
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 1;
+}
+li {
+	display: inline-block;
+}
+/* Style the links to look like tabs (3 href links) with ul = tablist and subsequent a href = #tabpanel1-3 */
+ul li a {
+	display: absolute;
+	padding: 1rem;
+	text-decoration: none;
+	color: black;
+	background-color: lightgrey;
+	border-radius: 1rem 1rem 0 0
+	/* only have this if clicked on
+	border: 2px solid black;
+	border-bottom: none;
+	border-radius: 1rem 1rem 0 0;
+	/* Have the bottom part onlt when clicked on 
+	border-bottom: 2px solid lightgrey; */
+}
+/* Style paragraphs to have background color and border) */
+div #tabpanel1, div #tabpanel2, div #tabpanel3 {
+	background-color: white;
+	border: 2px solid black;
+	padding: 1rem;
+}
+/* Style the tab to have a different appearance when active */
+/*ul li a:active {
+	background-color: white;
+	border-bottom: 2px solid white;
+	/* only have this if clicked on 
+	border: 2px solid black;
+	border-bottom: none;
+	border-radius: 1rem 1rem 0 0;
+	/* Have the bottom part onlt when clicked on 
+	border-bottom: 2px solid lightgrey;
+} */
+div [role = "tabpanel"] {
+    display: none;
+} 
+div [role="tabpanel"]:target{
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+    border: 2px solid;
+    background-color: whitesmoke;
+    border-top: none;
+}
+div[role="tabpanel"]:target ~ ul[role="tablist"] a[href="#tabpanel1"]  {
+	background-color: white;
+	border-bottom: 2px solid white;
+	/* only have this if clicked on */
+	border: 2px solid black;
+	border-bottom: none;
+	border-radius: 1rem 1rem 0 0;
+	/* Have the bottom part onlt when clicked on */
+	border-bottom: 2px solid lightgrey;
+}

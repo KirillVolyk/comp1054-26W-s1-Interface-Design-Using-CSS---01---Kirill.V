@@ -28,16 +28,10 @@ details {
 }
 
 /* Anime open and close of panel */
-details div {
-	transition: height 1s ease;
-}
-
-details:not([open]) div {
-	height: 1rem;
-}
-
-details[open] div {
-	height: auto;
+::details-content {
+	transition: heigbht 0.5s ease-out, content-visibility 0.5s ease-out allow-discrete;
+	height: 0;
+	overflow: clip;
 }
 
 
