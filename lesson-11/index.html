@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Module 11 - Forms | COMP1054 Web User Interface Design</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- STEP 1: Attach the Bootstrap CSS and JS via a Content Distribution Network (CDN) (https:getbootstrap.com/) -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+		<style>
+			body {
+				width: 80%;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Designing Forms</h1>
+		<!-- STEP 2: To leverage the Bootstrap form control styles, add the form-control class to the following input elements: text, search, email, url, tel, password, number, date (Bootstrap applies display: block and width: 100%) - adjust width of FORM element to see -->
+
+		<form action="" id="" method="post">
+			<div class="mb-5 w-25">
+				<label for="name1" class="form-label">Name:</label>
+			    <input type="text" id="name1" class="form-control" name="name" />
+			</div>
+
+			<label for="search1" class="form-label">Search:</label>
+			<input type="search" id="search1" class="form-control" name="search" />
+
+			<!--<label>Email
+			 		<input type="email" id="email1" class="form-control" />
+				</label>
+			-->
+
+			<label for="email1" id="email1" class="form-label">Email:</label>
+			<input type="email" id="email1" class="form-control" name="email" />
+
+			<input type="url" id="url1" class="form-control" name="url" />
+			<input type="tel" id="tel1" class="form-control" name="tel" />
+			<input type="password" id="password1" class="form-control" name="password" />
+			<input type="number" id="number1" class="form-control" name="number" />
+			<input type="date" id="date1" class="form-control" name="date" />
+			
+			<input type="submit" class="btn" value="Submit"/>
+			<button type="submit" class="btn btn-outline-primary btn-sm">Submit</button>
+
+		</form>
+
+		<!-- STEP 3: Add suitable labels for each of the above form inputs -->
+
+		<!-- STEP 4: Surround each label and input with a sectioning element (DIV is fine in this case), observing how Bootstrap visually groups the pair with a margin-bottom -->
+
+		<!-- STEP 5: Contruct an inline form consisting of a username, password, "Remember me" checkbox, and submit button - Add a class form-inline to the FORM element  -->
+		<form class="form-inline">
+			<label for="name" class="visually-hidden">Name</label>
+			<input type="text" id="name" class="form-control" id="name" placeholder="Jane Doe" />
+
+			<label for="username" class="form-label">Username</label>
+			<div class="input-group mb-3 mt-3">
+				<span class="input-group-text">username</span>
+				<input type="text" id="username" class="form-control" placeholder="Username" />
+				<span class="input-group-text">@example.com</span>
+			</div>
+
+			<div class="form-check">
+				<input type="checkbox" class="form-check-input" id="rememberme" value="rememberme" />
+				<label for="rememberme" class="form-check-label">Remember me</label>
+			</div>
+
+			<div class="form-check form-check-inline">
+				<input type="radio" class="form-check-input" id="myradio1" name="radiogroup" />
+				<label for="myradio" class="form-check-label">Option 1</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input type="radio" class="form-check-input" id="myradio2" name="radiogroup" />
+				<label for="myradio" class="form-check-label">Option 2</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input type="radio" class="form-check-input" id="myradio3" name="radiogroup" />
+				<label for="myradio" class="form-check-label">Option 3</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input type="radio" class="form-check-input" id="myradio4" name="radiogroup" />
+				<label for="myradio" class="form-check-label">Option 4</label>
+			</div>
+
+			<button type="submit" class="btn btn-warning">Submit</button>
+		</form>
+		<!-- STEP 6: Style the buttons consistently across platforms with the class "btn", and if it is the primary submit button, then add another class, "btn-primary" -->
+
+		<!-- STEP 7: Make checkboxes and radio buttons look and behave consistently across platforms with "custom-control" classes -->
+		<form>
+
+		<!-- STEP 8: Add the class="custom-control-inline" to the custom-control DIV elements above to arrange the radio buttons horizontally - the default is vertically stacked -->
+
+		<!-- STEP 9: Custom styles for SELECT elements entails adding a "custom-select" class to the start tag -->
+
+			<select class="form-select form-select-sm mt-3 mb-3" id="" name="" disabled>
+				<option value="opt1">Choice 1</option>
+				<option value="opt2">Choice 2</option>
+				<option value="opt3">Choice 3</option>
+			</select>
+
+			<div class="form-check form-switch mb-3">
+				<input class="form-check-input" type="checkbox" class="form-check-input" id="toggle">
+				<label for="toggle" class="form-check-label">Toggle Switch</label>
+			</div>
+
+			<div class="form-floating">
+				<input type="password" id="pass" class="form-control" placeholder="Password" />
+				<label for="pass">Password</label>
+			</div>
+
+		<!-- STEP 10: Size controls by adding a class, either "form-control-lg" or "form-control-sm" -->
+			<input class="form-control " type="text" placeholder="Large">
+			<input class="form-control " type="text" placeholder="Default">
+			<input class="form-control " type="text" placeholder="Small">
+		<!-- STEP 11: Add a bit of space between the above form inputs with class mb-2 (or whatever number you wish) -->
+			<button type="submit" class="">Submit</button>
+		<!-- STEP 12a: Try changing the above button - the btn-* classes are - primary, secondary, success, danger, warning, info, light, dark, link -->
+		<!-- STEP 12b: Perhaps the button is a bit overwhelming? Modify the above with btn-outline-* -->
+		</form>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+	</body>
+</html>
