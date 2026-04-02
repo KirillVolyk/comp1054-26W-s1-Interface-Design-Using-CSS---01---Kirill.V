@@ -1,14 +1,19 @@
-@charset "utf-8";
+ @charset "utf-8";
 
 html {
     font: 120%/1.2 "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 /* STEP 7: Collapse borders */
 table {
+    border-collapse: collapse;
 
-/* STEP 9a: Adjust placement of table caption */
+    /* STEP 9a: Adjust placement of table caption */
+    /* caption-side: bottom; */
 
-/* STEP 9b: Try different values for table-layout (https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout) in conjunction with the width property. */
+    /* STEP 9b: Try different values for table-layout (https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout) in conjunction with the width property. */
+    width: 100%;
+    table-layout: auto;
+    
 
 }
 /* STEP 10b: Zebra striping for columns */
@@ -18,7 +23,8 @@ col:nth-child(2) {
 
 /* STEP 8: Adjust padding for usability with TH and TD */
 td, th {
-
+    border: 1px solid black;
+    padding: 0.5em;
 }
 th {
     background: rgba(225,225,225,1);
@@ -32,6 +38,18 @@ thead tr:first-child th:first-child {
 
 }
 /* STEP 10a: Zebra striping for rows */
+
+col:nth-child(even) {
+    background: lightgoldenrodyellow;
+}
+
+tbody tr:nth-child(odd) {
+    background: grey;
+}
+
+colgroup + colgroup col:nth-child(1) {
+    background: lightblue;
+}
 
 tfoot td {
     font-size: 60%;

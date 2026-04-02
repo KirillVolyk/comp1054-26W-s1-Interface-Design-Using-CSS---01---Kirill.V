@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eastern Metropolitan - Division Standings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/tables.css" rel="stylesheet">
+    <script src="../js/tablesort/tablesort.min.js"></script>
+    <link href="../js/tablesort/css/tablesort.css" rel="stylesheet">
+    <script src="../js/tables.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Eastern</h1>
+    </header>
+    <main>
+        <table>
+            <caption>Metropolitan</caption>
+            <!-- Kinda confused on how to do proper colgroup, please let me know how to properly do it if I want the first row to be titles, and the rest data -->
+            <colgroup>
+                <col class="col-rank">
+                <col class="col-team">
+                <col class="col-gp">
+                <col class="col-w">
+                <col class="col-l">
+                <col class="col-ot">
+                <col class="col-pts">
+                <col class="col-pct">
+                <col class="col-rw">
+                <col class="col-row">
+                <col class="col-gf">
+                <col class="col-ga">
+                <col class="col-diff">
+                <col class="col-home">
+                <col class="col-away">
+                <col class="col-so">
+                <col class="col-l10">
+                <col class="col-strk">
+            </colgroup>
+            <thead>
+                <tr>
+                    <!-- 18 -->
+                    <th scope="col">Rank</th>
+                    <th scope="col" class="teamCol">Team</th>
+                    <th scope="col">GP</th>
+                    <th scope="col">W</th>
+                    <th scope="col">L</th>
+                    <th scope="col">OT</th>
+                    <th scope="col">PTS</th>
+                    <th scope="col">P%</th>
+                    <th scope="col">RW</th>
+                    <th scope="col">ROW</th>
+                    <th scope="col">GF</th>
+                    <th scope="col">GA</th>
+                    <th scope="col">DIFF</th>
+                    <th scope="col">HOME</th>
+                    <th scope="col">AWAY</th>
+                    <th scope="col">S/O</th>
+                    <th scope="col">L10</th>
+                    <th scope="col">STRK</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Carolina Hurricanes</td>
+                    <td>74</td>
+                    <td>47</td>
+                    <td>21</td>
+                    <td>6</td>
+                    <td>100</td>
+                    <td>.676</td>
+                    <td>34</td>
+                    <td>42</td>
+                    <td>263</td>
+                    <td>218</td>
+                    <td class="diff">+45</td>
+                    <td>26-10-2</td>
+                    <td>21-11-4</td>
+                    <td>5-3</td>
+                    <td>6-4-0</td>
+                    <td>W1</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Pittsburgh Penguins</td>
+                    <td>75</td>
+                    <td>38</td>
+                    <td>21</td>
+                    <td>16</td>
+                    <td>92</td>
+                    <td>.613</td>
+                    <td>31</td>
+                    <td>35</td>
+                    <td>263</td>
+                    <td>238</td>
+                    <td class="diff">+25</td>
+                    <td>18-12-8</td>
+                    <td>20-9-8</td>
+                    <td>3-6</td>
+                    <td>6-3-1</td>
+                    <td>W2</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">3</th>
+                    <td>New York Islanders</td>
+                    <td>76</td>
+                    <td>42</td>
+                    <td>29</td>
+                    <td>5</td>
+                    <td>89</td>
+                    <td>.586</td>
+                    <td>28</td>
+                    <td>38</td>
+                    <td>222</td>
+                    <td>221</td>
+                    <td class="diff">+1</td>
+                    <td>21-13-2</td>
+                    <td>21-16-3</td>
+                    <td>4-5</td>
+                    <td>5-5-0</td>
+                    <td>L2</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Columbus Blue Jackets</td>
+                    <td>75</td>
+                    <td>38</td>
+                    <td>25</td>
+                    <td>12</td>
+                    <td>88</td>
+                    <td>.587</td>
+                    <td>27</td>
+                    <td>32</td>
+                    <td>239</td>
+                    <td>231</td>
+                    <td class="diff">+8</td>
+                    <td>20-10-8</td>
+                    <td>18-15-4</td>
+                    <td>6-2</td>
+                    <td>5-4-1</td>
+                    <td>L1</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Philadelphia Flyers</td>
+                    <td>74</td>
+                    <td>37</td>
+                    <td>25</td>
+                    <td>12</td>
+                    <td>86</td>
+                    <td>.581</td>
+                    <td>23</td>
+                    <td>28</td>
+                    <td>220</td>
+                    <td>225</td>
+                    <td class="diffn">-5</td>
+                    <td>17-12-8</td>
+                    <td>20-13-4</td>
+                    <td>9-4</td>
+                    <td>7-2-1</td>
+                    <td>L1</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Washington Capitals</td>
+                    <td>75</td>
+                    <td>38</td>
+                    <td>28</td>
+                    <td>9</td>
+                    <td>85</td>
+                    <td>.567</td>
+                    <td>32</td>
+                    <td>36</td>
+                    <td>238</td>
+                    <td>223</td>
+                    <td class="diff">+15</td>
+                    <td>23-11-5</td>
+                    <td>15-17-4</td>
+                    <td>2-6</td>
+                    <td>6-2-2</td>
+                    <td>W3</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">7</th>
+                    <td>New Jersey Devils</td>
+                    <td>74</td>
+                    <td>38</td>
+                    <td>34</td>
+                    <td>2</td>
+                    <td>78</td>
+                    <td>.527</td>
+                    <td>26</td>
+                    <td>34</td>
+                    <td>205</td>
+                    <td>227</td>
+                    <td class="diffn">-22</td>
+                    <td>19-15-2</td>
+                    <td>19-19-0</td>
+                    <td>4-0</td>
+                    <td>6-4-0</td>
+                    <td>L1</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">8</th>
+                    <td>New York Rangers</td>
+                    <td>75</td>
+                    <td>31</td>
+                    <td>35</td>
+                    <td>9</td>
+                    <td>71</td>
+                    <td>.473</td>
+                    <td>22</td>
+                    <td>28</td>
+                    <td>215</td>
+                    <td>233</td>
+                    <td class="diffn">-18</td>
+                    <td>12-18-7</td>
+                    <td>19-17-2</td>
+                    <td>3-1</td>
+                    <td>4-5-1</td>
+                    <td>W3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Adapted from https://www.nhl.com/standings/2026-03-31/division
+                    </td>
+                </tr>
+            </tfoot>
+
+        </table>
+    </main>
+    <footer>
+        <small>Sport Team Analysis Inc.</small>
+    </footer>
+</body>
+
+</html>

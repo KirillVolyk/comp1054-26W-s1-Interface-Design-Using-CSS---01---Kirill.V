@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+html {
+    font: 120%/1.2 "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* Set captio nadn title to be on the left like in the original table */
+caption, h1{
+    text-align: left;
+    font-weight: bold;
+}
+
+/* basic table style */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+}
+
+/* set border to be like in original, top and bottom */
+th,td {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 0.5em;
+}
+
+/* make every odd row after the title very light grey like in original table */
+tbody tr:nth-child(odd)  {
+    background: rgba(0,0,0,0.15);
+}
+
+/* make difference green if positive */
+.diff {
+    color: green;
+}
+
+/* make difference red if negative */
+.diffn {
+    color: red;
+}
+
+/* failed first attempt at making team column left aligned */
+/* .col-team{
+    text-align: left;
+}  doesnt work*/
+
+/* alight entire team column left */
+tbody td:nth-child(2),
+thead th:nth-child(2) {
+    text-align: left;
+}
+
+/* style table footer a bit */
+tfoot {
+    font-size: 60%;
+    border: 1px solid black;
+    text-align: left;
+}
+
