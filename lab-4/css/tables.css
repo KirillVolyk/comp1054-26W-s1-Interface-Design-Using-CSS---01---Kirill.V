@@ -7,7 +7,8 @@ html {
 }
 
 /* Set captio nadn title to be on the left like in the original table */
-caption, h1{
+caption,
+h1 {
     text-align: left;
     font-weight: bold;
 }
@@ -20,15 +21,16 @@ table {
 }
 
 /* set border to be like in original, top and bottom */
-th,td {
+th,
+td {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding: 0.5em;
 }
 
 /* make every odd row after the title very light grey like in original table */
-tbody tr:nth-child(odd)  {
-    background: rgba(0,0,0,0.15);
+tbody tr:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.15);
 }
 
 /* make difference green if positive */
@@ -58,4 +60,3 @@ tfoot {
     border: 1px solid black;
     text-align: left;
 }
-
