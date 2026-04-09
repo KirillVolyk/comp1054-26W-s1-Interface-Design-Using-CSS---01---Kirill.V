@@ -1,10 +1,11 @@
 /* STEP 3: Apply basic layout styles */
 /* Universal box-sizing with inheritance (https://css-tricks.com/box-sizing/#article-header-id-6) */
 html {
+	box-sizing: border-box;
 
 }
 *, *:before, *:after {
-
+	box-sizing: inherit;
 }
 /* STEP 5a: Remove all diagnostic colors and margins from HEADER, MAIN, and FOOTER */
 body {
@@ -12,23 +13,38 @@ body {
 }
 /* STEP 5b: Change the colors for the HEADER and FOOTER */
 header {
-
+	background-color: #ccc;
+	display: flex;
+	justify-content: space-between;
 	/* STEP 6: Layout the H1 and NAV horzontally in the HEADER */
 
 }
 /* STEP 7: Make links look better */
 header nav a {
-
+	text-decoration: none;
 }
 /* STEP 10: Style hamburger menu button */
 #menu-icon {
-
+	display: block;
+	color: white;
+	font-size: 2rem;
+	font-weight: bold;
+	margin-top: 1.25rem;
 }
 header nav ul {
-	/* STEP 9: Hide the horizontal navigation list for small screens */
-
+	
 	/* STEP 8: Style the navigation menu such that it is now a box that sits just under the hamburger menu button */
+	list-style-type: none;
+	position: absolute;
+	left: 0;
+	top: 4rem;
+	padding: 1rem;
+	background-color: white;
+	border: 0.5rem solid black;
+	width: 100%;
 
+	/* STEP 9: Hide the horizontal navigation list for small screens */
+	left: -100%;
 }
 /* STEP 12: Ensure links are full-width and easy to touch */
 header nav ul a {
@@ -39,55 +55,65 @@ header nav ul a:hover {
 	color: white;
 }
 /* STEP 11: Reveal the navigation menu when the hamburger button is hovered over */
-header nav:hover ul {
+header nav:hover ul,
+header nav:focus ul {
+	left: 0;
 
 }
 main {
 
 }
 header, section, footer {
-
+	padding: 1rem;
 }
 footer {
 
 }
 /* STEP 4a: Build media query breakpoint for bigger screens (2-column layout) */
-@media only screen and () {
+/* NEW SYnTAX: @media screen and (width >= 425px) */
+@media only screen and (min-width: 425) {
 	h1 {
-
+		font-size: 3rem;
 	}
 	/* STEP 14: Size up hamburger icon a bit to match main heading */
 	#menu-icon {
-
+		margin-top: 2.5rem;
+		font-size: 2.5rem;
 	}
 	main {
-
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 	main section {
-
+		flex-basis: 50%;
 	}
 }
 /* STEP 4b: Add another media query breakpoint for even bigger screens (4-column layout) */
-@media only screen and () {
+@media only screen and ((min-width: 768px) or (orientation: landscape)) {
 	/* STEP 13a: Rearrange the navigation so that we don't use the hamburger */
 	#menu-icon {
-
+		display: none;
 	}
 	/* STEP 13b: Stack the H1 and the NAV in a column */
 	header {
-
+		flex-direction: column;
 	}
 	/* STEP 13c: Null out the hover behaviour on the HEADER NAV, and render the UL horizontally across the screen in full-width, distributing the links inside */
-	header nav ul, header nav:hover ul {
-
+	header nav ul{
+		position: static;
+		display: flex;
+		justify-content: space-evenly;
 	}
 	/* STEP 13d: Size up the HEADER NAV links */
-	header nav ul a {
-
+	header nav ul a,
+	header nav:hover ul,
+	header nav:focus ul {
+		font-size: 1.5rem;
 	}
 	/* STEP 4c: Use flexbox to create the 4-column layout */
 	main {
-
+		flex-wrap: nowrap;
 	}
 	main section {
 
