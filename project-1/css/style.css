@@ -1,1 +1,78 @@
 @charset "UTF-8";
+
+/* Remove skip link */
+.skip-link{
+    position: absolute;
+    top: -40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header h2 {
+    font-size: 1.1rem;
+  }
+
+  .link-github,
+  .link-guidelines,
+  .link-downloadcss,
+  .link-downloadhtml,
+  .link-codepen,
+  .link-allstyles {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  footer .container ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .profile ul,
+  .features {
+    padding: 0;
+  }
+}

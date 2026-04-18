@@ -218,4 +218,45 @@ body {
   80%  { transform: scale(1.58); }
   100% { transform: scale(1.50); }
 }
+/* END OF ANIMATION FOR PULSING */
 
+/* GOLD GLOW HOVER FOR HERO TEXT */
+.hero h1,
+.hero p {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* HERO TEXT — OUTWARD GOLD AURA */
+/* .hero h1:hover,
+.hero p:hover {
+  animation: goldGlow 0.6s forwards;
+  color: var(--text-main); 
+}
+
+@keyframes goldGlow {
+  0% {
+    text-shadow: 0 0 0px var(--gold-accent);
+  }
+  100% {
+    text-shadow:
+      0 0 4px var(--gold-accent),
+      0 0 8px var(--gold-accent),
+      0 0 14px var(--gold-accent),
+      0 0 22px var(--gold-accent);
+  }
+} */
+
+/* HERO TEXT — INWARD GROWING GOLD OUTLINE */
+.hero h1,
+.hero p {
+  color: var(--text-main);
+  -webkit-text-stroke: 0px var(--gold-accent); /* no outline initially */
+}
+
+/* On hover: outline grows inward */
+.hero h1:hover,
+.hero p:hover {
+  -webkit-text-stroke: 0.5px var(--gold-accent);
+ 
+}
