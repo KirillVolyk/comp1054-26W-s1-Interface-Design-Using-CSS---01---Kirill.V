@@ -1,9 +1,178 @@
 @charset "UTF-8";
 
+/* begin normalize/reset ------------------ */
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    font-size: 100%;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* -------------------------------------- */
+:root {
+    --bg-deep: rgba(24, 21, 38, 1);
+    --purple-main: rgba(45, 40, 72, 1);
+    --gold-accent: rgba(197, 177, 80, 1);
+    --maroon: rgba(119, 32, 51, 1);
+    --text-main: rgba(230, 230, 235, 1);
+}
+
+/* Fonts */
+/* regular text */
+.marcellus-regular {
+    font-family: "Marcellus", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* title */
+.cinzel-decorative-regular {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cinzel-decorative-bold {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.cinzel-decorative-black {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* very unique */
+.uncial-antiqua-regular {
+    font-family: "Uncial Antiqua", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* set overall background + text color */
+html {
+    background-color: var(--purple-main);
+    color: var(--text-main);
+    font-family: Cinzel Decorative, serif;
+}
+
 /* Remove skip link */
-.skip-link{
+.skip-link {
     position: absolute;
     top: -40px;
+}
+
+/* remove all link decorations */
+a {
+    text-decoration: none;
+    color: var(--maroon);
+    font-weight: 800;
+}
+
+/* make star proprly sized */
+span svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--gold-accent);
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 2rem;
+    list-style: none;
+    background-color: var(--bg-deep);
+}
+
+nav ul a {
+    display: block;
+    position: relative;
+    padding: 1rem 5rem;
+    background-color: var(--purple-main);
+    box-shadow: 10px 15px 15px var(--maroon);
+    /* maybe do first 3 point right, then point left */
+    border-radius: 10px 25px 10px 25px;
+}
+
+nav ul a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../adds/smallRedG.png");
+    background-size: 90px 57px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+nav ul a:hover {
+    background-image: none;
+}
+
+nav ul a:hover::after {
+    opacity: 1;
+    animation: growPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes growPulse {
+  0%   { transform: scale(1.25); }
+  20%  { transform: scale(1.50); }
+  40%  { transform: scale(1.45); }
+  60%  { transform: scale(1.56); }
+  80%  { transform: scale(1.58); }
+  100% { transform: scale(1.50); }
 }
 
 
@@ -30,49 +199,48 @@
 
 
 
-
 @media (max-width: 600px) {
-  .container {
-    padding: 0 1rem;
-  }
+    .container {
+        padding: 0 1rem;
+    }
 
-  nav ul {
-    flex-direction: column;
-    padding: 0;
-  }
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
 
-  nav ul li {
-    width: 100%;
-    text-align: center;
-  }
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
 
-  header h1 {
-    font-size: 1.8rem;
-  }
+    header h1 {
+        font-size: 1.8rem;
+    }
 
-  header h2 {
-    font-size: 1.1rem;
-  }
+    header h2 {
+        font-size: 1.1rem;
+    }
 
-  .link-github,
-  .link-guidelines,
-  .link-downloadcss,
-  .link-downloadhtml,
-  .link-codepen,
-  .link-allstyles {
-    display: block;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-  }
+    .link-github,
+    .link-guidelines,
+    .link-downloadcss,
+    .link-downloadhtml,
+    .link-codepen,
+    .link-allstyles {
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
 
-  footer .container ul {
-    flex-direction: column;
-    padding: 0;
-  }
+    footer .container ul {
+        flex-direction: column;
+        padding: 0;
+    }
 
-  .profile ul,
-  .features {
-    padding: 0;
-  }
+    .profile ul,
+    .features {
+        padding: 0;
+    }
 }
