@@ -106,6 +106,13 @@ html {
     top: -40px;
 }
 
+/* center everything give it room to breathe */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
 /* remove all link decorations */
 a {
     text-decoration: none;
@@ -117,23 +124,47 @@ header>.container {
     background-image: url("../adds/CjPKUxug.png");
     background-size: cover;
     background-position: center;
+    border-radius: 300px 300px 200px 200px;
+    /* Found this online: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/corner-shape */
+    corner-shape: scoop;
+    /* border: 20px solid var(--gold-accent); */
+    box-shadow: inset 20px 30px 60px rgba(230, 230, 235, 0.21), 10px 20px 40px rgba(0, 0, 0, 0.45);
 }
 
 header h2:first-of-type {
-    padding: 2rem;
     margin-top: 34rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 4rem;
     background-color: var(--purple-main);
+    color: var(--text-main);
+    font-weight: 700;
+    border-radius: 0px 4px 12px 0px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.45);
+    border: 2px solid rgba(119, 32, 51, 0.20);
+    margin-bottom: 4rem;
 }
 
 header p:first-of-type {
-    padding: 2rem;
+    
     margin-top: -1rem;
     background-color: var(--purple-main);
+    display: block;
+    align-items: center;
+    padding: 1rem 4rem;
+    background-color: var(--purple-main);
+    color: var(--text-main);
+    font-weight: 700;
+    border-radius: 0px 4px 12px 0px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.45);
+    border: 2px solid rgba(119, 32, 51, 0.20);
+    margin-bottom: 2rem;
+    width: fit-content;
 }
 
 /* make the github link with the star, look like a cool button */
 .link-github {
-    display: inline-flex;
+    display: inline-block;
     align-items: center;
     padding: 0.5rem 2rem;
     background-color: var(--purple-main);
@@ -142,11 +173,12 @@ header p:first-of-type {
     border-radius: 0px 4px 12px 0px;
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.45);
     border: 2px solid rgba(119, 32, 51, 0.20);
-    margin-bottom: 2REM;
+    margin-bottom: 2rem;
 }
 
 /* first 3 letters deep purple, then 1 letter lighter purple, then 1 letter maroon, mirron from right */
 h1 {
+    position: relative;
     font-size: 10rem;
     text-align: center;
     padding-top: 10rem;
@@ -158,8 +190,8 @@ h1 {
             var(--purple-main) 35%,
             var(--maroon) 40%,
             var(--gold-accent) 47%,
-            var(--maroon) 65%,
-            var(--purple-main) 80%,
+            var(--maroon) 60%,
+            var(--purple-main) 65%,
             var(--bg-deep) 90%,
             var(--bg-deep) 100%);
     /* limit the bg size so we can properly cover text */
@@ -169,9 +201,9 @@ h1 {
     color: transparent;
 
     /* outline */
-    -webkit-text-stroke: 0.5px var(--text-main);
-
+    -webkit-text-stroke: 2px var(--bg-deep);
 }
+
 
 
 /* make star proprly sized */
