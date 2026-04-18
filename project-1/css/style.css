@@ -113,6 +113,67 @@ a {
     font-weight: 800;
 }
 
+header>.container {
+    background-image: url("../adds/CjPKUxug.png");
+    background-size: cover;
+    background-position: center;
+}
+
+header h2:first-of-type {
+    padding: 2rem;
+    margin-top: 34rem;
+    background-color: var(--purple-main);
+}
+
+header p:first-of-type {
+    padding: 2rem;
+    margin-top: -1rem;
+    background-color: var(--purple-main);
+}
+
+/* make the github link with the star, look like a cool button */
+.link-github {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: var(--purple-main);
+    color: var(--text-main);
+    font-weight: 700;
+    border-radius: 0px 4px 12px 0px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.45);
+    border: 2px solid rgba(119, 32, 51, 0.20);
+    margin-bottom: 2REM;
+}
+
+/* first 3 letters deep purple, then 1 letter lighter purple, then 1 letter maroon, mirron from right */
+h1 {
+    font-size: 10rem;
+    text-align: center;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    /* gradient covers the text */
+    background: linear-gradient(to right,
+            var(--bg-deep) 5%,
+            var(--bg-deep) 20%,
+            var(--purple-main) 35%,
+            var(--maroon) 40%,
+            var(--gold-accent) 47%,
+            var(--maroon) 65%,
+            var(--purple-main) 80%,
+            var(--bg-deep) 90%,
+            var(--bg-deep) 100%);
+    /* limit the bg size so we can properly cover text */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    /* outline */
+    -webkit-text-stroke: 0.5px var(--text-main);
+
+}
+
+
 /* make star proprly sized */
 span svg {
     width: 20px;
@@ -124,57 +185,84 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 0;
+    margin: 10px;
     padding: 2rem;
     list-style: none;
-    background-color: var(--bg-deep);
+    background: linear-gradient(225deg, var(--purple-main), var(--bg-deep));
+    border-radius: 5px;
+    box-shadow: 5px 20px 40px rgba(0, 0, 0, 0.45);
+    border: 2px solid rgba(119, 32, 51, 0.20);
+}
+
+nav ul li {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
 }
 
 nav ul a {
-    display: block;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    text-align: center;
+    /* spacing */
     position: relative;
     padding: 1rem 5rem;
+    /* border/bg */
     background-color: var(--purple-main);
     box-shadow: 10px 15px 15px var(--maroon);
-    /* maybe do first 3 point right, then point left */
     border-radius: 10px 25px 10px 25px;
 }
 
+/* begin anim stuff -----------------------*/
 nav ul a::after {
     content: "";
     position: absolute;
     inset: 0;
-
     background-image: url("../adds/smallRedG.png");
-    background-size: 90px 57px;
+    background-size: 50px 25px;
     background-repeat: no-repeat;
     background-position: center;
-
     opacity: 0;
-    transform: scale(1);
     transition: opacity 0.2s ease;
     pointer-events: none;
-    z-index: 2;
-}
-
-nav ul a:hover {
-    background-image: none;
 }
 
 nav ul a:hover::after {
     opacity: 1;
     animation: growPulse 2.5s ease-in-out infinite;
+    content: "I Order You To Click !";
 }
 
+/* resource */
 @keyframes growPulse {
-  0%   { transform: scale(1.25); }
-  20%  { transform: scale(1.50); }
-  40%  { transform: scale(1.45); }
-  60%  { transform: scale(1.56); }
-  80%  { transform: scale(1.58); }
-  100% { transform: scale(1.50); }
+    0% {
+        transform: scale(1.25);
+    }
+
+    20% {
+        transform: scale(1.50);
+    }
+
+    40% {
+        transform: scale(1.45);
+    }
+
+    60% {
+        transform: scale(1.56);
+    }
+
+    80% {
+        transform: scale(1.58);
+    }
+
+    100% {
+        transform: scale(1.50);
+    }
 }
 
+/* end pulse anim --------------------------*/
 
 
 
