@@ -453,8 +453,8 @@ aside h3 {
 .features span > span {
     display: block;
     font-size: 0.9rem;
-    color: var(--bg-deep);
-    text-shadow: 3px 3px 2px var(--maroon);
+    color: var(--maroon);
+    text-shadow: 3px 3px 2px var(--bg-deep);
     margin-top: 0.2rem;
 }
 
@@ -474,14 +474,112 @@ aside a:not(.features a):not(.link-allstyles):hover {
     background-color: var(--gold-accent);
     color: var(--purple-main);
 }
+/* Notes */
+/* fix dowloads links being too close */
+
+/* fix footer */
+
+/* style view all styles DONE */
 
 
+/* view all style */
+.link-allstyles {
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.5rem 2rem;
+    border: 2px solid rgba(197, 177, 80, 0.60);
+    border-radius: 0px 8px 8px 0px;
+    color: var(--gold-accent);
+    transition: background-color 0.2s ease;
+}
+
+/* transition reverse color liek before */
+.link-allstyles:hover {
+    background-color: var(--gold-accent);
+    color: var(--purple-main);
+}
+
+/* footer styles */
+.page-footer {
+    background-color: var(--bg-deep);
+    padding: 3rem 0;
+    border-top: 2px solid rgba(197, 177, 80, 0.30);
+}
+
+/* p in footer */
+.page-footer p {
+    font-family: "Marcellus", serif;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+/* footer ul */
+.page-footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* links in footer */
+.page-footer ul a {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-family: "Marcellus", serif;
+    color: var(--gold-accent);
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(197, 177, 80, 0.30);
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+}
+
+/* hover effect, brigher border */
+.page-footer ul a:hover {
+    border-color: var(--gold-accent);
+}
+
+/* style the star like before */
+.page-footer svg {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    fill: var(--gold-accent);
+    vertical-align: middle;
+    padding-right: 4px;
+}
+
+/* linkanimation for stephanie */
+.footer div p {
+    
+}
+
+/* seperate download links */
+#files a {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--purple-main);
+    color: var(--gold-accent);
+    border-radius: 4px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.45);
+    border: 2px solid rgba(119, 32, 51, 0.20);
+    transition: background-color 0.2s ease;
+}
+
+/* reverse color on hover animation */
+#files a:hover {
+    background-color: var(--gold-accent);
+    color: var(--purple-main);
+}
+
+/* link animation for stephanie top. forgot */
 
 
-
-
-
-
+/* link animation for footers */
 
 
 
