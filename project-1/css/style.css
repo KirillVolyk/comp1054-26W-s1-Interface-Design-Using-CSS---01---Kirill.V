@@ -239,9 +239,11 @@ header .container>p a:hover {
 
 /* make star proprly sized */
 span svg {
+    display: inline;
     width: 20px;
     height: 20px;
     fill: var(--gold-accent);
+    vertical-align: middle;
 }
 
 /* navigation list */
@@ -292,7 +294,6 @@ nav ul a::after {
     background-position: center;
     opacity: 0;
     transition: opacity 0.2s ease;
-    pointer-events: none;
 }
 
 /* navigation link hover effect */
