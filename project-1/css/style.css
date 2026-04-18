@@ -93,11 +93,12 @@ select {
     font-style: normal;
 }
 
-/* set overall background + text color */
+/* set overall background + text color + other basics*/
 html {
     background-color: var(--purple-main);
     color: var(--text-main);
     font-family: Cinzel Decorative, serif;
+    word-spacing: 20%;
 }
 
 /* Remove skip link */
@@ -118,7 +119,7 @@ main {
     padding: 4rem 0;
 }
 
-main > .container {
+main>.container {
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -135,7 +136,7 @@ header>.container {
     background-image: url("../adds/CjPKUxug.png");
     background-size: cover;
     background-position: center;
-    border-radius: 300px 300px 200px 200px;
+    border-radius: 250px 250px 200px 200px;
     /* Found this online: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/corner-shape */
     corner-shape: scoop;
     /* border: 20px solid var(--gold-accent); */
@@ -157,7 +158,7 @@ header h2:first-of-type {
 }
 
 header p:first-of-type {
-    
+
     margin-top: -1rem;
     background-color: var(--purple-main);
     display: block;
@@ -170,7 +171,8 @@ header p:first-of-type {
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.45);
     border: 2px solid rgba(119, 32, 51, 0.20);
     margin-bottom: 2rem;
-    width: fit-content;
+    width: 100%;
+    text-align: center;
 }
 
 /* make the github link with the star, look like a cool button */
@@ -215,7 +217,25 @@ h1 {
     -webkit-text-stroke: 2px var(--bg-deep);
 }
 
+/* do slight modifications on bolded/strong */
+strong {
+    color: var(--text-main);
+    font-size: 1.15rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+}
 
+/* link animation for stephanie top. forgot */
+header .container>p a {
+    display: inline-block;
+    color: var(--maroon);
+    transition: color 0.2s ease;
+}
+
+header .container>p a:hover {
+    color: rgba(150, 32, 51, 1);
+    transform: scale(1.05);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
 
 /* make star proprly sized */
 span svg {
@@ -224,6 +244,7 @@ span svg {
     fill: var(--gold-accent);
 }
 
+/* navigation list */
 nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -237,6 +258,7 @@ nav ul {
     border: 2px solid rgba(119, 32, 51, 0.20);
 }
 
+/* navigation list item */
 nav ul li {
     flex: 1;
     display: flex;
@@ -244,6 +266,7 @@ nav ul li {
     margin: 1rem;
 }
 
+/* navigation links */
 nav ul a {
     display: grid;
     place-items: center;
@@ -272,13 +295,17 @@ nav ul a::after {
     pointer-events: none;
 }
 
+/* navigation link hover effect */
 nav ul a:hover::after {
     opacity: 1;
+    /* resource: https://www.w3schools.com/css/css3_animations.asp */
     animation: growPulse 2.5s ease-in-out infinite;
     content: "I Order You To Click !";
+    /* give a slight white outline */
+    text-shadow: 1px 1px 0.2px rgba(255, 255, 255, 0.8);
 }
 
-/* resource */
+/* resource: https://www.w3schools.com/css/css3_animations.asp */
 @keyframes growPulse {
     0% {
         transform: scale(1.25);
@@ -348,6 +375,7 @@ main a {
     color: var(--gold-accent);
     transition: color 0.2s ease;
 }
+
 /* links in main on hover */
 main a:hover {
     color: var(--maroon);
@@ -363,6 +391,7 @@ blockquote {
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.35);
 }
 
+/* p in blockquote */
 blockquote p {
     margin: -1rem;
 }
@@ -378,23 +407,24 @@ main ol {
     gap: 0.4rem;
 }
 
-/* custom bullet color */
+/* custom bullet color for bullet*/
 main ul li::marker {
     color: var(--gold-accent);
 }
 
+/* custom bullet color for numbered */
 main ol li::marker {
     color: var(--maroon);
 }
 
 /* aside */
-
 aside {
     background-color: var(--purple-main);
     padding: 3rem 0;
     border-top: 2px solid rgba(119, 32, 51, 0.30);
 }
 
+/* h2 in aside */
 aside h2 {
     color: var(--gold-accent);
     font-size: 1.2rem;
@@ -411,12 +441,14 @@ aside h2 {
     gap: 0.5rem;
 }
 
+/* h3 in aside */
 aside h3 {
     color: var(--gold-accent);
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
 }
 
+/* first span in li's | under profile */
 .profile ul li span:first-child {
     color: var(--gold-accent);
     margin-right: 0.5rem;
@@ -432,6 +464,7 @@ aside h3 {
     gap: 0.5rem;
 }
 
+/* feature li */
 .features li {
     border-bottom: 1px solid rgba(197, 177, 80, 0.40);
 }
@@ -450,7 +483,7 @@ aside h3 {
 }
 
 /* author text  */
-.features span > span {
+.features span>span {
     display: block;
     font-size: 0.9rem;
     color: var(--maroon);
@@ -474,6 +507,7 @@ aside a:not(.features a):not(.link-allstyles):hover {
     background-color: var(--gold-accent);
     color: var(--purple-main);
 }
+
 /* Notes */
 /* fix dowloads links being too close */
 
@@ -534,10 +568,9 @@ aside a:not(.features a):not(.link-allstyles):hover {
     padding: 0.5rem 1rem;
     border: 1px solid rgba(197, 177, 80, 0.30);
     border-radius: 4px;
-    transition: border-color 0.2s ease;
 }
 
-/* hover effect, brigher border */
+/* hover effect, brigher border, instant */
 .page-footer ul a:hover {
     border-color: var(--gold-accent);
 }
@@ -550,11 +583,21 @@ aside a:not(.features a):not(.link-allstyles):hover {
     fill: var(--gold-accent);
     vertical-align: middle;
     padding-right: 4px;
+    padding-bottom: 4px;
 }
 
-/* linkanimation for stephanie */
-.footer div p {
-    
+/* linkanimation footer links */
+.page-footer .container p a {
+    display: inline-block;
+    color: var(--maroon);
+    transition: color 0.2s ease;
+}
+
+/* link in p which are in footer container */
+.page-footer .container p a:hover {
+    color: rgba(150, 32, 51, 1);
+    transform: scale(1.05);
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 /* seperate download links */
@@ -576,11 +619,18 @@ aside a:not(.features a):not(.link-allstyles):hover {
     color: var(--purple-main);
 }
 
-/* link animation for stephanie top. forgot */
+/* oh hover change h1 to have yellow outline and db-deep */
+h1:hover {
+    -webkit-text-stroke: 2px var(--gold-accent);
+    color: var(--bg-deep);
+    transition: color 0.8s ease, -webkit-text-stroke 0.8s ease;
+}
 
-
-/* link animation for footers */
-
+/* align to center : mainted by... ,star on github top page */
+/* had to change width: fit contente to 100% */
+header .container{
+    text-align: center;
+}
 
 
 
