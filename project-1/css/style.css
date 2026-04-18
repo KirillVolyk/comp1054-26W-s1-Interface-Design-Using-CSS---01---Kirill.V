@@ -113,6 +113,17 @@ html {
     padding: 0 2rem;
 }
 
+main {
+    background-color: var(--bg-deep);
+    padding: 4rem 0;
+}
+
+main > .container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
 /* remove all link decorations */
 a {
     text-decoration: none;
@@ -296,9 +307,173 @@ nav ul a:hover::after {
 
 /* end pulse anim --------------------------*/
 
+/* each article gets a subtlee gold top border*/
+article {
+    border-top: 2px solid rgba(197, 177, 80, 0.30);
+    padding-top: 2rem;
+}
 
+/* sections inside articles get vertical spacing for looks */
+article section {
+    margin-bottom: 2.5rem;
+}
 
+/* h2 headings inside main  */
+main h2 {
+    font-size: 1.6rem;
+    color: var(--gold-accent);
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.05em;
+}
 
+/* h3 headings inside mian */
+main h3 {
+    font-size: 1.1rem;
+    color: var(--maroon);
+    margin-bottom: 1rem;
+    letter-spacing: 0.04em;
+}
+
+/* p in main */
+main p {
+    font-family: "Marcellus", serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+/* links inside main get a gold hover  */
+main a {
+    color: var(--gold-accent);
+    transition: color 0.2s ease;
+}
+/* links in main on hover */
+main a:hover {
+    color: var(--maroon);
+}
+
+/* how it works section */
+blockquote {
+    border-left: 6px solid var(--gold-accent);
+    background-color: var(--purple-main);
+    padding: 1.2rem 1.8rem;
+    border-radius: 0 8px 8px 0;
+    margin: 1.5rem 0;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+blockquote p {
+    margin: -1rem;
+}
+
+/* ul lists inside main */
+main ul,
+main ol {
+    font-family: "Marcellus", serif;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+/* custom bullet color */
+main ul li::marker {
+    color: var(--gold-accent);
+}
+
+main ol li::marker {
+    color: var(--maroon);
+}
+
+/* aside */
+
+aside {
+    background-color: var(--purple-main);
+    padding: 3rem 0;
+    border-top: 2px solid rgba(119, 32, 51, 0.30);
+}
+
+aside h2 {
+    color: var(--gold-accent);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* profile list */
+.profile ul {
+    font-family: "Marcellus", serif;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+aside h3 {
+    color: var(--gold-accent);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile ul li span:first-child {
+    color: var(--gold-accent);
+    margin-right: 0.5rem;
+}
+
+/*  features list */
+.features {
+    font-family: "Marcellus", serif;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.features li {
+    border-bottom: 1px solid rgba(197, 177, 80, 0.40);
+}
+
+/* links in features */
+.features a {
+    display: block;
+    color: var(--gold-accent);
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+/* on hover change color */
+.features a:hover {
+    color: var(--maroon);
+}
+
+/* author text  */
+.features span > span {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--bg-deep);
+    text-shadow: 3px 3px 2px var(--maroon);
+    margin-top: 0.2rem;
+}
+
+/* view link */
+aside a:not(.features a):not(.link-allstyles) {
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    border: 2px solid rgba(197, 177, 80, 0.60);
+    color: var(--gold-accent);
+    transition: background-color 0.2s ease;
+}
+
+/* reverse color text and bg (almost got mix-blend-mode diff to workgood with this*/
+aside a:not(.features a):not(.link-allstyles):hover {
+    background-color: var(--gold-accent);
+    color: var(--purple-main);
+}
 
 
 
