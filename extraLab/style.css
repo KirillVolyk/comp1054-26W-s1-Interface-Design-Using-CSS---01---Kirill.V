@@ -1,0 +1,49 @@
+/* Chosen property: mix-blend-mode */
+/* Specifically: difference */
+/* short description: 
+        This property allows you to control how an element's content should be blended with the content behind it */
+
+/* body style */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* style first example */
+/* background */
+.background {
+    width: 100%;
+    height: 300px;
+    background: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+}
+/* text */
+.text {
+    font-size: 80px;
+    font-weight: bold;
+    color: lightblue;
+    /* my chosen property */
+    mix-blend-mode: difference;
+}
+
+/* style second example */
+/* background */
+.background1 {
+    width: 100%;
+    height: 300px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* text */
+.text1 {
+    font-size: 10px;
+    font-weight: bold;
+    color: lightgray;
+    /* my chosen property */
+    mix-blend-mode: difference;
+}
