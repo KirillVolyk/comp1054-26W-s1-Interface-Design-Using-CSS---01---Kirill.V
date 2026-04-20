@@ -252,7 +252,7 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 10px;
+    margin: 10px 0;
     padding: 2rem;
     list-style: none;
     background: linear-gradient(225deg, var(--purple-main), var(--bg-deep));
@@ -266,7 +266,7 @@ nav ul li {
     flex: 1;
     display: flex;
     justify-content: space-evenly;
-    margin: 1rem;
+    margin: 0.5rem 0.4rem;
 }
 
 /* navigation links */
@@ -277,7 +277,7 @@ nav ul a {
     text-align: center;
     /* spacing */
     position: relative;
-    padding: 1rem 5rem;
+    padding: 1rem 0rem;
     /* border/bg */
     background-color: var(--purple-main);
     box-shadow: 10px 15px 15px var(--maroon);
@@ -637,10 +637,9 @@ header .container{
 }
 
 
-/* addapt for smaller screens (fix h1 to be responsive) */
+/* addapt for smaller screens (fix h1 to be responsive DONE) */
 
 @media (max-width: 600px) {
-    /* making h1 be responsive */
 
     .container {
         padding: 0 1rem;
@@ -648,7 +647,8 @@ header .container{
 
     nav ul {
         flex-direction: column;
-        padding: 0;
+        padding: 2rem;
+        margin-bottom: 1rem;
     }
 
     nav ul li {
