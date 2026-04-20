@@ -119,7 +119,7 @@ main {
     padding: 4rem 0;
 }
 
-main>.container {
+main > .container {
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -132,19 +132,21 @@ a {
     font-weight: 800;
 }
 
-header>.container {
+/* style top container (where the header content is placed) */
+header > .container {
     background-image: url("../adds/CjPKUxug.png");
     background-size: cover;
     background-position: center;
     border-radius: 250px 250px 200px 200px;
     /* Found this online: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/corner-shape */
     corner-shape: scoop;
-    /* border: 20px solid var(--gold-accent); */
+    border: 20px solid var(--bg-deep);
     box-shadow: inset 20px 30px 60px rgba(230, 230, 235, 0.21), 10px 20px 40px rgba(0, 0, 0, 0.45);
 }
 
+/* style the second heading (A modern css...) */
 header h2:first-of-type {
-    margin-top: 34rem;
+    margin-top: 10rem;
     display: inline-flex;
     align-items: center;
     padding: 1rem 4rem;
@@ -154,24 +156,24 @@ header h2:first-of-type {
     border-radius: 0px 4px 12px 0px;
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.45);
     border: 2px solid rgba(119, 32, 51, 0.20);
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
+/* style the credit block (mainted by stephanie...) */
 header p:first-of-type {
-
     margin-top: -1rem;
     background-color: var(--purple-main);
     display: block;
     align-items: center;
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
     background-color: var(--purple-main);
     color: var(--text-main);
     font-weight: 700;
     border-radius: 0px 4px 12px 0px;
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.45);
     border: 2px solid rgba(119, 32, 51, 0.20);
-    margin-bottom: 2rem;
-    width: 100%;
+     margin: -1rem auto 2rem auto;
+    width: fit-content;
     text-align: center;
 }
 
@@ -230,7 +232,6 @@ header .container>p a {
     color: var(--maroon);
     transition: color 0.2s ease;
 }
-
 header .container>p a:hover {
     color: rgba(150, 32, 51, 1);
     transform: scale(1.05);
@@ -297,6 +298,7 @@ nav ul a::after {
 }
 
 /* navigation link hover effect */
+/* Could not get the overlapping issue fixed with the image :( ) */
 nav ul a:hover::after {
     opacity: 1;
     /* resource: https://www.w3schools.com/css/css3_animations.asp */
@@ -509,10 +511,10 @@ aside a:not(.features a):not(.link-allstyles):hover {
     color: var(--purple-main);
 }
 
-/* Notes */
-/* fix dowloads links being too close */
+/* Notes for future prog*/
+/* fix dowloads links being too close DONE*/
 
-/* fix footer */
+/* fix footer DONE*/
 
 /* style view all styles DONE */
 
@@ -605,6 +607,7 @@ aside a:not(.features a):not(.link-allstyles):hover {
 #files a {
     display: inline-block;
     margin-right: 1rem;
+    margin-bottom: 1rem;
     padding: 0.5rem 1.5rem;
     background-color: var(--purple-main);
     color: var(--gold-accent);
@@ -634,16 +637,11 @@ header .container{
 }
 
 
-
-
-
-
-
-
-
-
+/* addapt for smaller screens (fix h1 to be responsive) */
 
 @media (max-width: 600px) {
+    /* making h1 be responsive */
+
     .container {
         padding: 0 1rem;
     }
@@ -659,7 +657,8 @@ header .container{
     }
 
     header h1 {
-        font-size: 1.8rem;
+        font-size: 6rem;
+        padding-top: 13rem;
     }
 
     header h2 {
