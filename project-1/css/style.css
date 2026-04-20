@@ -642,7 +642,7 @@ header .container{
 @media (max-width: 600px) {
 
     .container {
-        padding: 0 1rem;
+        padding: 0 1.2rem;
     }
 
     nav ul {
