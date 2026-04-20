@@ -638,8 +638,8 @@ header .container{
 
 
 /* addapt for smaller screens (fix h1 to be responsive DONE) */
-
-@media (max-width: 600px) {
+/* make it either max width or orientation not landscape */
+@media (max-width: 600px), (orientation: portrait) {
 
     .container {
         padding: 0 1.2rem;
